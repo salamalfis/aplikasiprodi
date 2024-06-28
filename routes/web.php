@@ -31,7 +31,7 @@ Route::get('/register', [AuthController::class, 'register'])->name('register');
 
 
 Route::prefix('mahasiswa')->group(function () {
-    Route::get('dashboard',[DashboardController::class,"index"])->name('mahasiswa.dashboard');
+    Route::get('dashboard',[DashboardController::class,'mahasiswa'])->name('mahasiswa.dashboard');
     Route::get('/prodi',[ProdiController::class,"index"])->name('mahasiswa.prodi.index');
     Route::get('/metlit/pendataan',[MetlitController::class,"pendataan"])->name('mahasiswa.pendataan.index');
     Route::get('/metlit/pendataan/tambah',[MetlitController::class,"addPendataan"])->name('mahasiswa.pendataan.add');
@@ -70,7 +70,7 @@ Route::prefix('mahasiswa')->group(function () {
 });
 
 Route::prefix('prodi')->group(function () {
-    Route::get('dashboard',[DashboardController::class,"index"])->name('kaprodi.dashboard');
+    Route::get('dashboard',[DashboardController::class,'prodi'])->name('kaprodi.dashboard');
    Route::get('/undurdiri/index',[UndurdiriProdiController ::class,"index"])->name('kaprodi.undurdiri.index');
    Route::get('/undurdiri/add',[UndurdiriProdiController ::class,"add"])->name('kaprodi.undurdiri.add');
    Route::get('/undurdiri/edit',[UndurdiriProdiController ::class,"edit"])->name('kaprodi.undurdiri.edit');
@@ -79,7 +79,7 @@ Route::prefix('prodi')->group(function () {
    Route::get('/verifikasita/index',[VerifikasiTAController ::class,"index"])->name('kaprodi.verifikasi-TA.index');
 });
 Route::prefix('doswal')->group(function () {
-   Route::get('dashboard',[DashboardController::class,"index"])->name('doswal.dashboard');
+   Route::get('dashboard',[DashboardController::class,"doswal"])->name('doswal.dashboard');
    Route::get('/komentarmetlit/index',[KomentarmetlitController ::class,"index"])->name('doswal.komentarmetlit.index');
    Route::get('/komentarTA/index',[KomentarTAController ::class,"index"])->name('doswal.komentarTA.index');
    Route::get('/UndurDiri/index',[UndurDiriDoswalController ::class,"index"])->name('doswal.UndurDiri.index');
