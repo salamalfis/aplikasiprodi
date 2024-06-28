@@ -1,46 +1,30 @@
 <?php
 
-namespace App\Http\Controllers\Kaprodi;
+namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class UndurdiriController extends Controller
+class VerifikasiController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $section = "Undur Diri";
-        $side_menu = 0;
-        $title = "Undur Diri";
-        return view('kaprodi/undurdiri/undurdiri',compact('title','section','side_menu'));
-       
+        //
     }
 
     /**
      * Show the form for creating a new resource.
      */
-     
-
-    public function add()
+    public function aktivasiakun()
     {
-        $section = "Undur Diri";
-        $side_menu = 0;
-        $title = "Undur Diri";
-        $title = "Tambah Undur Diri";
-        return view('kaprodi/undurdiri/add-undurdiri',compact('title','section','side_menu'));
+        $title = "Aktivisi Akun";
+        $section = "aktivasi";
+        $side_menu = 1;
+        return view('kaprodi/verifikasi/aktivasi-akun',compact('title','section','side_menu'));
     }
-    public function edit()
-    {
-        $section = "Undur Diri";
-        $side_menu = 0;
-        $title = "Undur Diri";
-        $title = "Edit Undur Diri";
-        return view('kaprodi/undurdiri/edit-undurdiri',compact('title','section','side_menu'));
-    }
-
 
     /**
      * Store a newly created resource in storage.
@@ -61,7 +45,11 @@ class UndurdiriController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-  
+    public function edit(string $id)
+    {
+        //
+    }
+
     /**
      * Update the specified resource in storage.
      */

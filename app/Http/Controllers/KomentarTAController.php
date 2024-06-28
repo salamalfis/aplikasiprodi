@@ -1,36 +1,28 @@
 <?php
 
-namespace App\Http\Controllers\Doswal;
+namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class UndurDiriController extends Controller
+class KomentarTAController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $title = "Undur Diri";
-        $section = "undur diri";
-        return view('doswal/undur-diri/index',compact('title','section'));
+        $title = "Lihat Progres TA";
+        $section = "komentar ta";
+        return view('doswal/komentar-ta/index',compact('title','section'));
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function add()
+    public function create()
     {
-        $title = "Tambah Undur Diri";
-        $section = "undur diri";
-        return view('doswal/undur-diri/add-undurdiri',compact('title','section'));
-    }
-    public function edit()
-    {
-        $title = "Edit Undur Diri";
-        $section = "undur diri";
-        return view('doswal/undur-diri/edit-undurdiri',compact('title','section'));
+        //
     }
 
     /**
@@ -52,7 +44,10 @@ class UndurDiriController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
- 
+    public function edit(string $id)
+    {
+        //
+    }
 
     /**
      * Update the specified resource in storage.

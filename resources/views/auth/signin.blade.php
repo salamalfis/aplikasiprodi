@@ -29,9 +29,9 @@
       top:0;
     }
 
-    .left { 
-      left:-5%;  
-      right:50%;  
+    .left {
+      left:-5%;
+      right:50%;
     }
 
     .divider {
@@ -88,7 +88,7 @@
 
   </style>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -104,10 +104,6 @@
       <div class="form-group mt-4">
         <b for="" style="margin-bottom:20px;color:#344767;">Password</b>
         <input style="margin-top:10px;" type="text" placeholder="Password" class="form-control">
-      </div>
-      <div class="form-check form-switch mt-2">
-        <input class="form-check-input" style="background-color:#74A3BF;" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-        <label class="form-check-label" for="flexSwitchCheckChecked">Remember me</label>
       </div>
       <div class="form-group mt-2">
         <button class="btn form-control" style="background-image: linear-gradient(to right, #A6D0DF 15%,#5385A9 99.9%); color:white; padding:10px; border-radius:10px; font-weight:bold;">SIGN IN</button>

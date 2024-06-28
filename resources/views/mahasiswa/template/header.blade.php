@@ -36,7 +36,7 @@
 
   <!-- CSS Files -->
   <link id="pagestyle" href="{{ URL::asset('assets/css/soft-ui-dashboard.css?v=1.0.7')}}" rel="stylesheet" />
-  
+
   <!-- Nepcha Analytics (nepcha.com) -->
   <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
   <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
@@ -67,7 +67,7 @@
       border-radius:5px;
       color:white;
     }
-    
+
     .btn-aksi{
       border:none;
       background-color: white;
@@ -87,12 +87,12 @@
     table.table-bordered{
         border:0.2px solid #E4E6E9;
         border-right-width:0px;
-        border-left-width:0px;  
+        border-left-width:0px;
         margin-top:20px;
         border-top:hidden;
     }
 
-    
+
 
     table.table-bordered > thead > tr > th{
         border:0.2px solid #e0e8f4;
@@ -126,7 +126,7 @@
     .activated .accord-button{
       box-shadow:  0px 1px 10px 0px rgb(0 0 0 / 20%) !important;
     }
-    
+
     .li-p{
       font-size: 14px;
       padding-left:10px;
@@ -141,16 +141,16 @@
     .selected-m a{
       color:white !important;
     }
-    
+
     .bg-whites{
       background-color:black;
     }
-    
+
 
     #file-upload {
       display: none;
     }
-    
+
     .form-upload{
       font-weight: 100;
       text-decoration: none;
@@ -158,7 +158,7 @@
       padding:100px;
       border: 1px solid rgb(222, 220, 220);
     }
-    
+
 
   </style>
 </head>
@@ -167,7 +167,7 @@
   <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 " id="sidenav-main">
     <div class="sidenav-header">
       <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
-      <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/soft-ui-dashboard/pages/dashboard.html " target="_blank">
+      <a class="navbar-brand m-0" href="dashboard" target="_blank">
         <img src="{{ URL::asset('assets/bg/logo.png')}}" class="navbar-brand-img h-100" alt="main_logo'">
         <span class="ms-1 font-weight-bold">Monitoring Mahasiswa</span>
       </a>
@@ -197,7 +197,7 @@
         </li>
         <div class="accordion @if($section == 'metlit') activated @endif" id="metlit" style="margin-left:15px; width:220px; border-radius:10px;">
           <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOne"> 
+            <h2 class="accordion-header" id="headingOne">
               <button class="accordion-button accord-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMetlit" aria-expanded="true" aria-controls="collapseMetlit">
                 <div class="icon-shape icon-sm shadow border-radius-md @if($section == 'metlit') button-blue @else bg-white @endif text-center me-2 d-flex align-items-center justify-content-center">
                   <svg class="@if($section != 'metlit') bg-whites @endif" width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -276,7 +276,7 @@
             </div>
           </div>
         </div>
-        
+
          <li class="nav-item">
             <a class="nav-link @if($section == 'komentar') active @endif" href="<?= route('mahasiswa.komentar.index') ?>">
             <div class="icon-shape icon-sm shadow border-radius-md @if($section == 'komentar') button-blue @else bg-white @endif text-center me-2 d-flex align-items-center justify-content-center">
@@ -300,7 +300,7 @@
         <li class="nav-item mt-3">
           <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Account pages</h6>
         </li>
-        
+
         <li class="nav-item">
           <a class="nav-link  " href="<?= route('signin') ?>">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -321,7 +321,7 @@
             <span class="nav-link-text ms-1">Logout</span>
           </a>
         </li>
-     
+
       </ul>
     </div>
   </aside>
@@ -354,15 +354,15 @@
               </ul>
            </li>
           </div>
-            
+
             <li class="nav-item d-flex align-items-center">
               <a href="javascript:;" class="nav-link text-body font-weight-bold px-0">
                 <i class="fa fa-user me-sm-1"></i>
                 <span class="d-sm-inline d-none">Sign In</span>
               </a>
             </li>
-           
-            
+
+
           </ul>
         </div>
       </div>

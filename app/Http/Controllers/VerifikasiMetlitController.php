@@ -1,18 +1,21 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
-class Dashboard extends Controller
+class VerifikasiMetlitController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('admin/dashboard/index');
+        $title = "Verifikasi Metlit";
+        $section = "aktivasi";
+        $side_menu = 2;
+        return view('kaprodi/verifikasi-metlit/index',compact('title','section','side_menu'));
     }
 
     /**
@@ -21,10 +24,6 @@ class Dashboard extends Controller
     public function create()
     {
         //
-    }
-
-    public function sign_up(){
-
     }
 
     /**

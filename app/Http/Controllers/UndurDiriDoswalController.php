@@ -1,30 +1,36 @@
 <?php
 
-namespace App\Http\Controllers\Kaprodi;
+namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class VerifikasiTAController extends Controller
+class UndurDiriController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $title = "Verifikasi Tugas Akhir";
-        $section = "aktivasi";
-        $side_menu = 3;
-        return view('kaprodi/verifikasi-TA/index',compact('title','section','side_menu'));
-       
+        $title = "Undur Diri";
+        $section = "undur diri";
+        return view('doswal/undur-diri/index',compact('title','section'));
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function add()
     {
-        //
+        $title = "Tambah Undur Diri";
+        $section = "undur diri";
+        return view('doswal/undur-diri/add-undurdiri',compact('title','section'));
+    }
+    public function edit()
+    {
+        $title = "Edit Undur Diri";
+        $section = "undur diri";
+        return view('doswal/undur-diri/edit-undurdiri',compact('title','section'));
     }
 
     /**
@@ -46,10 +52,7 @@ class VerifikasiTAController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
-    {
-        //
-    }
+
 
     /**
      * Update the specified resource in storage.

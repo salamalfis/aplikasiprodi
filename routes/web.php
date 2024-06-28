@@ -2,41 +2,32 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\Admin\Dashboard as AD;
-use App\Http\Controllers\Mahasiswa\Dashboard as DM;
-use App\Http\Controllers\Mahasiswa\ProdiController as PC;
-use App\Http\Controllers\Mahasiswa\MetlitController as MC;
-use App\Http\Controllers\Mahasiswa\ProgressAdministrasiController as PAC;
-use App\Http\Controllers\Mahasiswa\ProgressBimbinganController as PBC;
-use App\Http\Controllers\Mahasiswa\KomentarController as KC;
-use App\Http\Controllers\Mahasiswa\PendataanTugasAkhirController as PTAC;
-use App\Http\Controllers\Mahasiswa\ProgressAdministrasiTAController as PATAC;
-use App\Http\Controllers\Mahasiswa\ProgressBimbinganTAController as PBTAC;
-use App\Http\Controllers\Kaprodi\DashboardController as KDC;
-use App\Http\Controllers\Kaprodi\UndurdiriController as UDDC;
-use App\Http\Controllers\Kaprodi\VerifikasiController as VC;
-use App\Http\Controllers\Kaprodi\VerifikasiMetlitController as VMC;
-use App\Http\Controllers\Kaprodi\VerifikasiTAController as VTAC;
-use App\Http\Controllers\Doswal\DashboardController as DDC;
-use App\Http\Controllers\Doswal\KomentarmetlitController as KMC;
-use App\Http\Controllers\Doswal\KomentarTAController as KTC;
-use App\Http\Controllers\Doswal\UndurDiriController as DUDC;
-Route::get('/', function () {
-
-});
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ProdiController;
+use App\Http\Controllers\MetlitController;
+use App\Http\Controllers\ProgressAdministrasiController;
+use App\Http\Controllers\ProgressBimbinganController;
+use App\Http\Controllers\KomentarController;
+use App\Http\Controllers\PendataanTugasAkhirController;
+use App\Http\Controllers\ProgressAdministrasiTAController;
+use App\Http\Controllers\ProgressBimbinganTAController;
+use App\Http\Controllers\UndurdiriController;
+use App\Http\Controllers\VerifikasiController;
+use App\Http\Controllers\VerifikasiMetlitController;
+use App\Http\Controllers\VerifikasiTAController;
+use App\Http\Controllers\KomentarmetlitController;
+use App\Http\Controllers\KomentarTAController;
 
 
 Route::get('signup',[AuthController::class,"sign_up"])->name('signup');
 Route::get('signin',[AuthController::class,"sign_in"])->name('signin');
 
-Route::prefix('admin')->group(function () {
-    Route::get('dashboard',[AD::class,"index"])->name('admin.dashboard');
-});
+
 
 
 Route::prefix('mahasiswa')->group(function () {
-    Route::get('dashboard',[DM::class,"index"])->name('mahasiswa.dashboard');
-    Route::get('/prodi',[PC::class,"index"])->name('mahasiswa.prodi.index');
+    Route::get('dashboard',[DashboardController::class,"index"])->name('mahasiswa.dashboard');
+    Route::get('/prodi',[ProdiController::class,"index"])->name('mahasiswa.prodi.index');
     Route::get('/metlit/pendataan',[MC::class,"pendataan"])->name('mahasiswa.pendataan.index');
     Route::get('/metlit/pendataan/tambah',[MC::class,"addPendataan"])->name('mahasiswa.pendataan.add');
     Route::get('/metlit/pendataan/edit',[MC::class,"editPendataan"])->name('mahasiswa.pendataan.edit');

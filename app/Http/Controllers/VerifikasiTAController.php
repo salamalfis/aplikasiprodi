@@ -1,21 +1,22 @@
 <?php
 
-namespace App\Http\Controllers\Mahasiswa;
+namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
-class ProgressBimbinganController extends Controller
+class VerifikasiTAController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $title = "Progress Bimbingan";
-        $side_menu = 2;
-        $section = "metlit";
-        return view('mahasiswa/progress-bimbingan/index',compact('title','side_menu','section'));
+        $title = "Verifikasi Tugas Akhir";
+        $section = "aktivasi";
+        $side_menu = 3;
+        return view('kaprodi/verifikasi-TA/index',compact('title','section','side_menu'));
+
     }
 
     /**
@@ -24,10 +25,6 @@ class ProgressBimbinganController extends Controller
     public function create()
     {
         //
-    }
-
-    public function sign_up(){
-
     }
 
     /**

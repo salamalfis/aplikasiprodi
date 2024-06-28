@@ -7,8 +7,12 @@
     },
     "routes":[
         {
+            "src": "/assets/bg/(.*)",
+            "dest" : "public/assets/bg/"
+        },
+        {
             "src": "/(.*)",
-            "dest": "/api/index"
+            "dest": "/api/index.php"
         }
     ],
     "env" : {

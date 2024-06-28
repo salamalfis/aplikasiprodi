@@ -1,29 +1,30 @@
 <?php
 
-namespace App\Http\Controllers\Kaprodi;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class VerifikasiController extends Controller
+class ProdiController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        return view('mahasiswa/prodi/index');
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function aktivasiakun()
+    public function create()
     {
-        $title = "Aktivisi Akun";
-        $section = "aktivasi";
-        $side_menu = 1;
-        return view('kaprodi/verifikasi/aktivasi-akun',compact('title','section','side_menu'));
+        //
+    }
+
+    public function sign_up(){
+
     }
 
     /**

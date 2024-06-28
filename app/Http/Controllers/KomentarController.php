@@ -1,20 +1,21 @@
 <?php
 
-namespace App\Http\Controllers\Kaprodi;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class DashboardController extends Controller
+class KomentarController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $title = "Dashboard";
-        $section = "dashboard";
-        return view('kaprodi/dashboard/index',compact('title','section'));
+        $section = "komentar";
+        $side_menu = 0;
+        $title = "Lihat Komentar Dosen";
+        return view('mahasiswa/komentar/index',compact('title','section','side_menu'));
     }
 
     /**
@@ -23,6 +24,10 @@ class DashboardController extends Controller
     public function create()
     {
         //
+    }
+
+    public function sign_up(){
+
     }
 
     /**

@@ -1,21 +1,39 @@
 <?php
 
-namespace App\Http\Controllers\Mahasiswa;
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class KomentarController extends Controller
+class MetlitController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $section = "komentar";
-        $side_menu = 0;
-        $title = "Lihat Komentar Dosen";
-        return view('mahasiswa/komentar/index',compact('title','section','side_menu'));
+        // return view('mahasiswa/prodi/index');
+    }
+
+    public function pendataan(){
+        $title = "Pendataan Metlit";
+        $section = "metlit";
+        $side_menu = 1;
+        return view('mahasiswa/metlit/pendataan',compact('title','section','side_menu'));
+    }
+
+    public function addPendataan(){
+        $section = "metlit";
+        $side_menu = 1;
+        $title = "Tambah Pendataan";
+        return view('mahasiswa/metlit/add-pendataan',compact('title','section','side_menu'));
+    }
+
+    public function editPendataan(){
+        $title = "Edit Pendataan";
+        $section = "metlit";
+        $side_menu = 1;
+        return view('mahasiswa/metlit/edit-pendataan',compact('title','section','side_menu'));
     }
 
     /**

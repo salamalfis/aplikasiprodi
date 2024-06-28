@@ -1,18 +1,21 @@
 <?php
 
-namespace App\Http\Controllers\Mahasiswa;
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class ProdiController extends Controller
+class ProgressBimbinganController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('mahasiswa/prodi/index');
+        $title = "Progress Bimbingan";
+        $side_menu = 2;
+        $section = "metlit";
+        return view('mahasiswa/progress-bimbingan/index',compact('title','side_menu','section'));
     }
 
     /**
