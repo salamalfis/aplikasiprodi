@@ -10,21 +10,21 @@ class DashboardController extends Controller
     {
         $title = "Dashboard";
         $section = "dashboard";
-        $side_menu = null;
+        $side_menu = '';
         return view('doswal/dashboard/index',compact('title','section'));
     }
     public function prodi()
     {
         $title = "Dashboard";
         $section = "dashboard";
-        $side_menu = null;
+        $side_menu = '';
         return view('prodi/dashboard/index',compact('title','section'));
     }
     public function mahasiswa()
     {
         $title = "Dashboard";
         $section = "dashboard";
-        $side_menu = null;
+        $side_menu = '';
         return view('mahasiswa/dashboard/index',compact('title','section'));
     }
 
