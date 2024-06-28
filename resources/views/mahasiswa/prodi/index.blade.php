@@ -1,7 +1,7 @@
-@include('mahasiswa/template/header')
+@include('kaprodi/template/header')
 
 <div class="row" style="margin-bottom:100%;">
-  <div class="container"> 
+  <div class="container">
       <table class="table table-responsive" id="table">
         <thead style="border-bottom:2px solid #d9dce0;">
           <tr>
@@ -42,13 +42,13 @@
               <i class="fa-solid fa-trash" style="color:red;"></i>
             </td>
           </tr>
-        </tbody> 
+        </tbody>
 
       </table>
   </div>
 
   <div class="container mt-4">
-    <h5>Project Table</h5> 
+    <h5>Project Table</h5>
     <table class="table table-responsive">
       <thead style="border-bottom:2px solid #d9dce0;">
         <tr>
@@ -81,10 +81,10 @@
           <td></td>
           <td></td>
         </tr>
-      </tbody> 
+      </tbody>
 
     </table>
 </div>
 </div>
 
-@extends('mahasiswa/template/footer')
+@extends('kaprodi/template/footer')

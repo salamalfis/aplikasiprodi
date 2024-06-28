@@ -18,7 +18,7 @@ class DashboardController extends Controller
         $title = "Dashboard";
         $section = "dashboard";
         $side_menu = 0;
-        return view('prodi.dashboard.index',compact('title','section','side_menu'));
+        return view('kaprodi.dashboard.index',compact('title','section','side_menu'));
     }
     public function mahasiswa()
     {

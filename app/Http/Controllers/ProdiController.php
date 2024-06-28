@@ -12,7 +12,10 @@ class ProdiController extends Controller
      */
     public function index()
     {
-        return view('mahasiswa/prodi/index');
+        $title = 'Prodi';
+        $section = 'prodi';
+        $side_menu = 0;
+        return view('mahasiswa.prodi.index', compact('title','section','side_menu'));
     }
 
     /**

@@ -20,21 +20,20 @@ use App\Http\Controllers\ProgressAdministrasiController;
 use App\Http\Controllers\ProgressAdministrasiTAController;
 
 
-Route::group(['middleware' => 'guest'], function () {
+// Route::group(['middleware' => 'guest'], function () {
 
-Route::get('/',[AuthController::class,'index'])->name('login');
-Route::get('/login',[AuthController::class,"index"])->name('signin');
-Route::get('/register', [AuthController::class, 'register'])->name('signup');
+Route::get('/',[AuthController::class,'index'])->name('/');
+Route::get('/signup',[AuthController::class,"sign_up"])->name('signup');
+Route::get('/signin',[AuthController::class,"sign_in"])->name('signin');
 
-});
+//});
 
 
 
 Route::prefix('mahasiswa')->group(function () {
-    Route::get('dashboard',[DashboardController::class,'mahasiswa'])->name('mahasiswa.dashboard');
-    Route::get('/prodi',[ProdiController::class,"index"])->name('mahasiswa.prodi.index');
+    Route::get('/dashboard',[DashboardController::class,'mahasiswa'])->name('mahasiswa.dashboard');
     Route::get('/metlit/pendataan',[MetlitController::class,"pendataan"])->name('mahasiswa.pendataan.index');
-    Route::get('/metlit/pendataan/tambah',[MetlitController::class,"addPendataan"])->name('mahasiswa.pendataan.add');
+    Route::get('/metlit/pendataan/add',[MetlitController::class,"addPendataan"])->name('mahasiswa.pendataan.add');
     Route::get('/metlit/pendataan/edit',[MetlitController::class,"editPendataan"])->name('mahasiswa.pendataan.edit');
 
     Route::get('/metlit/progres-admin',[ProgressAdministrasiController::class,"index"])->name('mahasiswa.progres-admin.index');
@@ -66,11 +65,12 @@ Route::prefix('mahasiswa')->group(function () {
     Route::get('/tugas-akhir/ta-progres-admin/eprt',[ProgressAdministrasiTAController::class,"eprt"])->name('mahasiswa.ta-progres-admin.eprt');
      Route::get('/tugas-akhir/ta-progres-admin/eprt',[ProgressAdministrasiTAController::class,"eprt"])->name('mahasiswa.ta-progres-admin.eprt');
 
-    // Route::get('tugas-akhir/progres-bimbingan',[ProgressAdministrasiTAController::class,"index"])->name('mahasiswa.ta-progres-bimbingan.index');
-});
+     // Route::get('tugas-akhir/progres-bimbingan',[ProgressAdministrasiTAController::class,"index"])->name('mahasiswa.ta-progres-bimbingan.index');
+    });
 
-Route::prefix('prodi')->group(function () {
+    Route::prefix('prodi')->group(function () {
     Route::get('dashboard',[DashboardController::class,'prodi'])->name('kaprodi.dashboard');
+    Route::get('/prodi',[ProdiController::class,"index"])->name('mahasiswa.prodi.index');
    Route::get('/undurdiri/index',[UndurdiriProdiController ::class,"index"])->name('kaprodi.undurdiri.index');
    Route::get('/undurdiri/add',[UndurdiriProdiController ::class,"add"])->name('kaprodi.undurdiri.add');
    Route::get('/undurdiri/edit',[UndurdiriProdiController ::class,"edit"])->name('kaprodi.undurdiri.edit');
