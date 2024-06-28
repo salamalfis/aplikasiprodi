@@ -20,9 +20,13 @@ use App\Http\Controllers\ProgressAdministrasiController;
 use App\Http\Controllers\ProgressAdministrasiTAController;
 
 
-Route::get('signup',[AuthController::class,"sign_up"])->name('signup');
-Route::get('signin',[AuthController::class,"sign_in"])->name('signin');
+Route::group(['middleware' => 'guest'], function () {
 
+Route::get('/',[AuthController::class,'index'])->name('login');
+Route::get('/login',[AuthController::class,"index"])->name('login');
+Route::get('/register', [AuthController::class, 'register'])->name('register');
+
+});
 
 
 
