@@ -1,17 +1,4 @@
-<!--
-=========================================================
-* Soft UI Dashboard - v1.0.7
-=========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://www.creative-tim.com/license)
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
--->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,7 +23,7 @@
 
   <!-- CSS Files -->
   <link id="pagestyle" href="{{ URL::asset('assets/css/soft-ui-dashboard.css?v=1.0.7')}}" rel="stylesheet" />
-  
+
   <!-- Nepcha Analytics (nepcha.com) -->
   <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
   <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
@@ -76,12 +63,12 @@
     table.table-bordered{
         border:0.2px solid #E4E6E9;
         border-right-width:0px;
-        border-left-width:0px;  
+        border-left-width:0px;
         margin-top:20px;
         border-top:hidden;
     }
 
-    
+
 
     table.table-bordered > thead > tr > th{
         border:0.2px solid #e0e8f4;
@@ -110,7 +97,7 @@
     .activated .accord-button{
       box-shadow: 0px 3px 10px 0px #888888 !important;
     }
-    
+
     .li-p{
       padding-left:10px;
     }
@@ -123,13 +110,13 @@
     .selected-m a{
       color:white !important;
     }
-    
+
     .bg-whites{
       background-color:black;
     }
 
-    
-    
+
+
 
   </style>
 </head>
@@ -230,7 +217,7 @@
         <li class="nav-item mt-3">
           <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Account pages</h6>
         </li>
-        
+
         <li class="nav-item">
           <a class="nav-link  " href="<?= route('signin') ?>">
             <div class="icon-shape icon-sm shadow border-radius-md @if($section == 'undurdiri') button-blue @else bg-white @endif text-center me-2 d-flex align-items-center justify-content-center">
@@ -251,7 +238,7 @@
             <span class="nav-link-text ms-1">Logout</span>
           </a>
         </li>
-       
+
       </ul>
     </div>
   </aside>
@@ -270,15 +257,15 @@
           <div class="ms-md-auto pe-md-3 d-flex align-items-center">
 
           </div>
-          
+
             <li class="nav-item d-flex align-items-center">
               <a href="javascript:;" class="nav-link text-body font-weight-bold px-0">
                 <i class="fa fa-user me-sm-1"></i>
                 <span class="d-sm-inline d-none">Logout</span>
               </a>
             </li>
-           
-            
+
+
           </ul>
         </div>
       </div>

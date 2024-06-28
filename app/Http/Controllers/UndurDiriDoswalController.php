@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class UndurDiriController extends Controller
+class UndurDiriDoswalController extends Controller
 {
     /**
      * Display a listing of the resource.
