@@ -23,8 +23,8 @@ use App\Http\Controllers\ProgressAdministrasiTAController;
 Route::group(['middleware' => 'guest'], function () {
 
 Route::get('/',[AuthController::class,'index'])->name('login');
-Route::get('/login',[AuthController::class,"index"])->name('login');
-Route::get('/register', [AuthController::class, 'register'])->name('register');
+Route::get('/login',[AuthController::class,"index"])->name('signin');
+Route::get('/register', [AuthController::class, 'register'])->name('signup');
 
 });
 
