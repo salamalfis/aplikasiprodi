@@ -100,22 +100,33 @@
             <div class="content-left" style=" height:400px; width:400px;">
                 <h2 style="color:#5082A7;">LOGIN</h2>
                 <p style="color:#67748E;">Enter your email and password to sign in</p>
-                <div class="form-group">
-                    <b for="" style="margin-bottom:20px;color:#344767; ">NIP/NIM</b>
-                    <input style="margin-top:10px;" type="text" placeholder="NIP/NIM" class="form-control">
-                </div>
-                <div class="form-group mt-4">
-                    <b for="" style="margin-bottom:20px;color:#344767;">Password</b>
-                    <input style="margin-top:10px;" type="text" placeholder="Password" class="form-control">
-                </div>
-                <div class="form-group mt-2">
-                    <button class="btn form-control"
-                        style="background-image: linear-gradient(to right, #A6D0DF 15%,#5385A9 99.9%); color:white; padding:10px; border-radius:10px; font-weight:bold;">SIGN
-                        IN</button>
-                </div>
-                <div class="form-group mt-2 text-center">
-                    Don't have an account? <b style="color:#74A3BF;">Sign up</b>
-                </div>
+                <form role="form" method="POST" action="{{ url('login') }}">
+                    @csrf
+                    <div class="form-group">
+                        <b for="iduser" style="margin-bottom:20px;color:#344767; ">NIP/NIM</b>
+                        <input style="margin-top:10px;" type="text" placeholder="NIP/NIM" class="form-control"
+                            name='iduser' autocomplete="off">
+                        @error('iduser')
+                            <p class="text-danger text-xs mt-2">{{ $message }}</p>
+                        @enderror
+                    </div>
+                    <div class="form-group mt-4">
+                        <b for="password" style="margin-bottom:20px;color:#344767;">Password</b>
+                        <input style="margin-top:10px;" type="text" placeholder="Password" class="form-control"
+                            id='password' name='password'  autocomplete="off">
+                        @error('password')
+                            <p class="text-danger text-xs mt-2">{{ $message }}</p>
+                        @enderror
+                    </div>
+                    <div class="form-group mt-2">
+                        <button type="submit" class="btn form-control"
+                            style="background-image: linear-gradient(to right, #A6D0DF 15%,#5385A9 99.9%); color:white; padding:10px; border-radius:10px; font-weight:bold;">SIGN
+                            IN</button>
+                    </div>
+                </form>
+                <p class="text-sm mt-3 mb-0">Don't have an account?
+                    <a href="<?= route('signup') ?>"class="text-dark font-weight-bolder">Sign up</a>
+                </p>
             </div>
         </div>
         <div class="divider"></div>

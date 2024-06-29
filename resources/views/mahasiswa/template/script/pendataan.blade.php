@@ -1,16 +1,16 @@
 <script>
     @if($message = session('succes_message'))
         Swal.fire({
-            title: "Good job!",
-            text: "You clicked the button!",
+            title: "Success!!",
+            text: "{{ $message }}",
             icon: "success"
         });
     @endif
 
     @if($message = session('error_message'))
         Swal.fire({
-            title: "Good job!",
-            text: "You clicked the button!",
+            title: "Error!",
+            text: "{{ $message }}",
             icon: "error",
         });
     @endif

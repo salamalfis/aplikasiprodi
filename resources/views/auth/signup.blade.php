@@ -1,24 +1,10 @@
-<!--
-=========================================================
-* Soft UI Dashboard - v1.0.7
-=========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://www.creative-tim.com/license)
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
--->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="apple-touch-icon" sizes="76x76" href="assets/bg/logo.png">
   <link rel="icon" type="image/png" href="assets/bg/logo.png">
   <title>
     Soft UI Dashboard by Creative Tim
@@ -109,7 +95,7 @@
                   <div class="text-center">
                   <button class="btn form-control" style="background-image: linear-gradient(to right, #A6D0DF 15%,#5385A9 99.9%); color:white; padding:10px; border-radius:10px; font-weight:bold;">SIGN IN</button>
                   </div>
-                  <p class="text-sm mt-3 mb-0">Already have an account? <a href="javascript:;" class="text-dark font-weight-bolder">Sign in</a></p>
+                  <p class="text-sm mt-3 mb-0">Already have an account? <a href="<?= route('signin')?>" class="text-dark font-weight-bolder">Sign in</a></p>
                 </form>
               </div>
             </div>

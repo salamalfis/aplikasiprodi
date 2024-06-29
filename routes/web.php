@@ -20,20 +20,24 @@ use App\Http\Controllers\ProgressAdministrasiController;
 use App\Http\Controllers\ProgressAdministrasiTAController;
 
 
-// Route::group(['middleware' => 'guest'], function () {
+Route::group(['middleware' => 'guest'], function () {
 
 Route::get('/',[AuthController::class,'index'])->name('/');
 Route::get('/signup',[AuthController::class,"sign_up"])->name('signup');
 Route::get('/signin',[AuthController::class,"sign_in"])->name('signin');
+Route::post('/login',[AuthController::class, 'login'])->name('login');
 
-//});
+});
 
+Route::group(['middleware' => 'auth'], function(){
+    Route::get('/dashboard',[DashboardController::class,'dashboard'])->name('dashboard');
 
 
 Route::prefix('mahasiswa')->group(function () {
     Route::get('/dashboard',[DashboardController::class,'mahasiswa'])->name('mahasiswa.dashboard');
     Route::get('/metlit/pendataan',[MetlitController::class,"pendataan"])->name('mahasiswa.pendataan.index');
     Route::get('/metlit/pendataan/add',[MetlitController::class,"addPendataan"])->name('mahasiswa.pendataan.add');
+    Route::post('/metlit/pendataan/store',[MetlitController::class,'storependataan'])->name('mahasiswa.pendataan.store');
     Route::get('/metlit/pendataan/edit',[MetlitController::class,"editPendataan"])->name('mahasiswa.pendataan.edit');
 
     Route::get('/metlit/progres-admin',[ProgressAdministrasiController::class,"index"])->name('mahasiswa.progres-admin.index');
@@ -69,14 +73,14 @@ Route::prefix('mahasiswa')->group(function () {
     });
 
     Route::prefix('prodi')->group(function () {
-    Route::get('dashboard',[DashboardController::class,'prodi'])->name('kaprodi.dashboard');
+    Route::get('dashboard',[DashboardController::class,'prodi'])->name('prodi.dashboard');
     Route::get('/prodi',[ProdiController::class,"index"])->name('mahasiswa.prodi.index');
-   Route::get('/undurdiri/index',[UndurdiriProdiController ::class,"index"])->name('kaprodi.undurdiri.index');
-   Route::get('/undurdiri/add',[UndurdiriProdiController ::class,"add"])->name('kaprodi.undurdiri.add');
-   Route::get('/undurdiri/edit',[UndurdiriProdiController ::class,"edit"])->name('kaprodi.undurdiri.edit');
-   Route::get('/verifikasi/aktivasiakun',[VerifikasiController ::class,"aktivasiakun"])->name('kaprodi.verifikasi.aktivasiakun');
-   Route::get('/verifikasimetlit/index',[VerifikasiMetlitController::class,"index"])->name('kaprodi.verifikasi-metlit.index');
-   Route::get('/verifikasita/index',[VerifikasiTAController ::class,"index"])->name('kaprodi.verifikasi-TA.index');
+   Route::get('/undurdiri/index',[UndurdiriProdiController ::class,"index"])->name('prodi.undurdiri.index');
+   Route::get('/undurdiri/add',[UndurdiriProdiController ::class,"add"])->name('prodi.undurdiri.add');
+   Route::get('/undurdiri/edit',[UndurdiriProdiController ::class,"edit"])->name('prodi.undurdiri.edit');
+   Route::get('/verifikasi/aktivasiakun',[VerifikasiController ::class,"aktivasiakun"])->name('prodi.verifikasi.aktivasiakun');
+   Route::get('/verifikasimetlit/index',[VerifikasiMetlitController::class,"index"])->name('prodi.verifikasi-metlit.index');
+   Route::get('/verifikasita/index',[VerifikasiTAController ::class,"index"])->name('prodi.verifikasi-TA.index');
 });
 Route::prefix('doswal')->group(function () {
    Route::get('dashboard',[DashboardController::class,"doswal"])->name('doswal.dashboard');
@@ -85,4 +89,6 @@ Route::prefix('doswal')->group(function () {
    Route::get('/UndurDiri/index',[UndurDiriDoswalController ::class,"index"])->name('doswal.UndurDiri.index');
    Route::get('/UndurDiri/add',[UndurDiriDoswalController ::class,"add"])->name('doswal.UndurDiri.add');
    Route::get('/UndurDiri/edit',[UndurDiriDoswalController ::class,"edit"])->name('doswal.UndurDiri.edit');
+});
+
 });
